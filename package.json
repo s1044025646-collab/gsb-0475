@@ -1,0 +1,24 @@
+{
+  "name": "idmt-overcurrent-sim",
+  "version": "1.0.0",
+  "description": "教学用单相反时限过流继电器离线仿真后端（API + CLI）",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "idmt-sim": "dist/cli/index.js"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --experimental-strip-types --test \"src/**/*.test.ts\"",
+    "start": "node --experimental-strip-types src/server/index.ts",
+    "demo": "node --experimental-strip-types src/cli/demo.ts"
+  },
+  "engines": {
+    "node": ">=22.5.0"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "typescript": "^7.0.2"
+  }
+}
